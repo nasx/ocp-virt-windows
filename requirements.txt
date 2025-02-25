@@ -1,4 +1,5 @@
 ansible
+ansible-builder
 ansible-lint
 dnspython
 jmespath
