@@ -2,7 +2,7 @@
 winvm_ad_admin_password: ChangeMe!
 winvm_ad_admin_user: Administrator@uc2.io
 winvm_ad_domain: uc2.io
-winvm_ad_domain_join: true
+winvm_ad_domain_join: false
 winvm_ad_domain_server: ad.uc2.io
 winvm_additional_disks:
   - bus: virtio
@@ -27,7 +27,7 @@ winvm_cpu_cores: 1
 winvm_cpu_sockets: 6
 winvm_cpu_threads: 1
 winvm_dns_domain: lab.uc2.io
-winvm_dns_server: 172.16.80.20
+winvm_dns_server: 172.16.10.2
 winvm_gateway: 172.16.10.254
 winvm_interface_name: Ethernet Instance 0
 winvm_ip: 172.16.10.252
@@ -38,6 +38,6 @@ winvm_network_name: default/vlan-100
 winvm_ram: 32Gi
 winvm_rootdisk_size: 60Gi
 winvm_rootdisk_source_pvc:
-  name: server-2022-template-volume
+  name: win2k22-template
   namespace: windows-virtual-machines
 winvm_rootdisk_storageclass: odf-storagecluster-ceph-rbd-virtualization

@@ -53,6 +53,8 @@
         domain_server: "{{ winvm_ad_domain_server }}"
         state: domain
         reboot: true
+      when:
+        - winvm_ad_domain_join | default(false)
 
     - name: Configure Additional Disks
       ansible.builtin.include_role:

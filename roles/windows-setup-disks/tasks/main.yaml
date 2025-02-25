@@ -14,7 +14,7 @@
 # An operating system (OS) disk is mapped to a DataVolume using its serial number.
 # When additional disks are defined in the Virtual Machine Instance (VMI)
 # specification, we set the serial number of each disk to match the name of its
-# associated DataVolume. This serial number is discoverable using the 
+# associated DataVolume. This serial number is discoverable using the
 # win_disk_facts module, allowing us to map a DataVolume to a specific disk device
 # within the OS.
 
@@ -52,7 +52,7 @@
             'drive_letter': item.drive_letter,
             'number': target_disks | json_query(_query_number) | first,
             'path': target_disks | json_query(_query_path) | first,
-            'serial': item.name            
+            'serial': item.name
           }
         ]
       }}

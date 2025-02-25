@@ -12,6 +12,8 @@
         ansible_port: 5986
         groups: domain_controller
         name: "{{ winvm_ad_domain_server }}"
+      when:
+        - winvm_ad_domain_join | default(false)
 
 - name: Remove VM from Active Directory
   become: false
@@ -25,6 +27,8 @@
         domain_username: "{{ winvm_ad_admin_user }}"
         name: "{{ winvm_name | upper }}"
         state: absent
+      when:
+        - winvm_ad_domain_join | default(false)
 
 - name: Delete VM From OpenShift
   become: false

@@ -66,7 +66,7 @@
 
     - name: Debug Current Context Name
       ansible.builtin.debug:
-        msg: "{{ _kubeconfig['current-context']  }}"
+        msg: "{{ _kubeconfig['current-context'] }}"
 
     - name: Search for Context
       ansible.builtin.set_fact:
@@ -74,7 +74,7 @@
           {{
             _kubeconfig.contexts |
               selectattr('name', 'equalto', _kubeconfig['current-context']) |
-              map(attribute='context') | 
+              map(attribute='context') |
               first
           }}
 
